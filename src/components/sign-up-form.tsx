@@ -81,8 +81,8 @@ export function SignUpForm() {
 
   return (
     <div className="container mx-auto flex h-screen w-full items-center justify-center">
-      <div className="mx-auto w-full max-w-md">
-        <Card>
+      <div className="mx-auto w-full max-w-md flex items-center justify-center">
+        <Card className="w-full">
           <CardHeader className="text-center">
             <CardTitle>Create an account</CardTitle>
           </CardHeader>
@@ -163,7 +163,7 @@ export function SignUpForm() {
                         <FormControl>
                           <Input
                             type="password"
-                            placeholder="•••••••••"
+                            placeholder="•••••••"
                             autoComplete="new-password"
                             disabled={isLoading}
                             {...field}
@@ -181,18 +181,18 @@ export function SignUpForm() {
                   </Button>
                 </form>
               </Form>
+              <p className="text-center text-sm mt-4">
+                Already have an account?{" "}
+                <Link
+                  href="/sign-in"
+                  className="underline underline-offset-4 hover:text-primary"
+                >
+                  Sign in
+                </Link>
+              </p>
             </div>
           </CardContent>
         </Card>
-        <p className="text-center text-sm mt-4">
-          Already have an account?{" "}
-          <Link
-            href="/signin"
-            className="underline underline-offset-4 hover:text-primary"
-          >
-            Sign in
-          </Link>
-        </p>
       </div>
     </div>
   )

@@ -29,17 +29,17 @@ export default async function SignInPage({
           </CardHeader>
           <CardContent>
             <SignInForm />
+            <p className="text-center text-sm mt-4">
+              Don&apos;t have an account?{" "}
+              <Link
+                href="/sign-up"
+                className="underline underline-offset-4 hover:text-primary"
+              >
+                Sign up
+              </Link>
+            </p>
           </CardContent>
         </Card>
-        <p className="text-center text-sm mt-4">
-          Don't have an account?{" "}
-          <Link
-            href="/sign-up"
-            className="underline underline-offset-4 hover:text-primary"
-          >
-            Sign up
-          </Link>
-        </p>
       </div>
     </div>
   )

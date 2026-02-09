@@ -142,11 +142,21 @@
     color: black !important;
   }
   
-  /* Form inputs inside cards */
+  /* Form inputs and labels inside cards */
   [class*="Card"] input, [class*="Card"] textarea, [class*="Card"] select,
   .card input, .card textarea, .card select,
   [class*="card"] input, [class*="card"] textarea, [class*="card"] select {
     color: black !important;
+  }
+  
+  [class*="Card"] label, .card label,
+  [class*="card"] label {
+    color: black !important;
+  }
+  
+  /* Form placeholders inside cards */
+  [class*="Card"] input::placeholder, .card input::placeholder {
+    color: #666 !important;
   }
   
   /* Badges and other elements inside cards */

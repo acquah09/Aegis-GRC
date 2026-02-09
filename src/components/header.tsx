@@ -18,12 +18,12 @@ export default function Header() {
   }
 
   return (
-    <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="border-b bg-teal-600 backdrop-blur supports-[backdrop-filter]:bg-teal-700/60">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
             <Link href="/dashboard" className="flex items-center space-x-2">
-              <Shield className="h-8 w-8 text-primary" />
+              <Shield className="h-8 w-8 text-white" />
               <span className="text-xl font-bold text-white">Aegis GRC</span>
             </Link>
           </div>
