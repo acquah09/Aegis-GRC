@@ -3,7 +3,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Overview } from "@/components/overview"
 import { RecentActivity } from "@/components/recent-activity"
-import { Shield, FileText, AlertTriangle, CheckCircle2 } from "lucide-react"
+import { Shield, FileText, AlertTriangle, CheckCircle2, TrendingUp, BarChart3 } from "lucide-react"
+import { RiskDistributionChart, TrendChart } from "@/components/charts"
 import { useState, useEffect } from "react"
 
 interface DashboardMetrics {
@@ -32,6 +33,17 @@ interface DashboardClientProps {
     firstName: string | null
     lastName: string | null
   }
+}
+
+// Check if user is new (no activity)
+const isNewUser = (metrics: DashboardMetrics | null) => {
+  if (!metrics) return true
+  return (
+    metrics.frameworks?.count === 0 &&
+    metrics.controls?.count === 0 &&
+    metrics.risks?.count === 0 &&
+    metrics.compliance?.count === 0
+  )
 }
 
 export default function DashboardClient({ user }: DashboardClientProps) {
@@ -94,10 +106,18 @@ export default function DashboardClient({ user }: DashboardClientProps) {
     <div className="space-y-6">
       <div>
         <h2 className="text-3xl font-bold tracking-tight">
-          Hello, {user.firstName || user.email?.split('@')[0]}
+          {isNewUser(metrics) ? (
+            <span>Hello, {user.firstName || user.email?.split('@')[0]}</span>
+          ) : (
+            <span>Hello, {user.firstName || user.email?.split('@')[0]}</span>
+          )}
         </h2>
         <p className="text-muted-foreground">
-          An overview of your organisation's current governance and risk position.
+          {isNewUser(metrics) ? (
+            <span>Let's start building your risk management foundation. Begin by adding your first risk assessment to establish your organization's risk profile.</span>
+          ) : (
+            <span>An overview of your organisation's current governance and risk position.</span>
+          )}
         </p>
       </div>
 
@@ -173,6 +193,28 @@ export default function DashboardClient({ user }: DashboardClientProps) {
           </CardContent>
         </Card>
       </div>
+      
+      {/* Charts and Visualizations */}
+      {!isNewUser(metrics) && (
+        <div className="grid gap-4 md:grid-cols-2">
+          <RiskDistributionChart 
+            data={[
+              { name: "High Risk", value: metrics?.risks?.high || 0, total: metrics?.risks?.count || 1, color: "bg-red-500" },
+              { name: "Medium Risk", value: metrics?.risks?.medium || 0, total: metrics?.risks?.count || 1, color: "bg-yellow-500" },
+              { name: "Low Risk", value: metrics?.risks?.low || 0, total: metrics?.risks?.count || 1, color: "bg-green-500" }
+            ]}
+            title="Risk Distribution"
+          />
+          <TrendChart 
+            data={[
+              { month: "Jan", risks: 5, controls: 8, compliance: 3 },
+              { month: "Feb", risks: 8, controls: 12, compliance: 7 },
+              { month: "Mar", risks: 12, controls: 15, compliance: 11 }
+            ]}
+            title="Monthly Trends"
+          />
+        </div>
+      )}
     </div>
   )
 }
