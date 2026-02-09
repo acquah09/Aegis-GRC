@@ -94,7 +94,7 @@ export default function DashboardClient({ user }: DashboardClientProps) {
     <div className="space-y-6">
       <div>
         <h2 className="text-3xl font-bold tracking-tight">
-          Welcome back, {user.firstName || user.email?.split('@')[0]}
+          Hello, {user.firstName || user.email?.split('@')[0]}
         </h2>
         <p className="text-muted-foreground">
           An overview of your organisation's current governance and risk position.
