@@ -3,6 +3,7 @@ import { SignInForm } from "@/components/sign-in-form"
 import { createClient } from "@/lib/server"
 import { redirect } from "next/navigation"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import Link from "next/link"
 
 export default async function SignInPage({
   searchParams,
@@ -30,6 +31,15 @@ export default async function SignInPage({
             <SignInForm />
           </CardContent>
         </Card>
+        <p className="text-center text-sm mt-4">
+          Don't have an account?{" "}
+          <Link
+            href="/sign-up"
+            className="underline underline-offset-4 hover:text-primary"
+          >
+            Sign up
+          </Link>
+        </p>
       </div>
     </div>
   )
