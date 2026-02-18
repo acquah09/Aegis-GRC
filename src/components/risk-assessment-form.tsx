@@ -145,7 +145,7 @@ export function RiskAssessmentForm() {
           Risk Assessment Form
         </CardTitle>
         <CardDescription>
-          Identify and assess potential risks to your organization
+          Identify and assess potential risks to your organisation
         </CardDescription>
       </CardHeader>
       <CardContent>

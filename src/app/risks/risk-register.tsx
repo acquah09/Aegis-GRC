@@ -103,7 +103,7 @@ export default function RiskRegister() {
           <div>
             <h1 className="text-3xl font-bold tracking-tight">Risk Assessment</h1>
             <p className="text-muted-foreground">
-              Identify and assess new risks to your organization
+              Identify and assess new risks to your organisation
             </p>
           </div>
           <Button variant="outline" onClick={() => setShowForm(false)}>
@@ -121,7 +121,7 @@ export default function RiskRegister() {
         <div>
           <h1 className="text-3xl font-bold tracking-tight">Risk Register</h1>
           <p className="text-muted-foreground">
-            Manage and track all identified organizational risks
+            Manage and track all identified organisational risks
           </p>
         </div>
         <Button onClick={() => setShowForm(true)} className="flex items-center gap-2">

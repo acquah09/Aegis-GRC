@@ -159,6 +159,19 @@
     color: #666 !important;
   }
   
+  /* Select dropdown text inside cards */
+  [class*="Card"] [data-radix-select-trigger], .card [data-radix-select-trigger] {
+    color: black !important;
+  }
+  
+  [class*="Card"] [data-radix-select-item], .card [data-radix-select-item] {
+    color: black !important;
+  }
+  
+  [class*="Card"] [data-radix-select-content], .card [data-radix-select-content] {
+    color: black !important;
+  }
+  
   /* Badges and other elements inside cards */
   [class*="Card"] [class*="badge"], [class*="Card"] [class*="Badge"],
   .card [class*="badge"], .card [class*="Badge"],

@@ -114,7 +114,7 @@ export default function DashboardClient({ user }: DashboardClientProps) {
         </h2>
         <p className="text-muted-foreground">
           {isNewUser(metrics) ? (
-            <span>Let's start building your risk management foundation. Begin by adding your first risk assessment to establish your organization's risk profile.</span>
+            <span>Let's start building your risk management foundation. Begin by adding your first risk assessment to establish your organisation's risk profile.</span>
           ) : (
             <span>An overview of your organisation's current governance and risk position.</span>
           )}
