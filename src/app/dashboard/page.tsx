@@ -10,7 +10,7 @@ import Header from "@/components/header"
 
 export const metadata: Metadata = {
   title: "Dashboard",
-  description: "GRC Sentinel Dashboard",
+  description: "Aegis GRC Dashboard",
 }
 
 export default async function DashboardPage() {

@@ -1,4 +1,4 @@
-# GRC Project - Governance, Risk & Compliance Platform
+# Aegis GRC - Governance, Risk & Compliance Platform
 
 A comprehensive Governance, Risk Management, and Compliance (GRC) platform built with modern web technologies.
 
@@ -36,7 +36,7 @@ A comprehensive Governance, Risk Management, and Compliance (GRC) platform built
 1. Clone the repository
    ```bash
    git clone https://github.com/acquah09/Aegis-GRC.git
-   cd GRC-Project
+   cd Aegis-GRC
    ```
 
 2. Install dependencies

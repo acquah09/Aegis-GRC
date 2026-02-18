@@ -24,7 +24,7 @@ export function AuthForm({ defaultVariant = "signin" }: AuthFormProps) {
         </div>
         <div className="relative flex justify-center text-xs uppercase">
           <span className="bg-background px-2 text-muted-foreground">
-            {variant === "signin" ? "New to GRC Sentinel?" : "Already have an account?"}
+            {variant === "signin" ? "New to Aegis GRC?" : "Already have an account?"}
           </span>
         </div>
       </div>

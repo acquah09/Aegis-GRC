@@ -52,7 +52,7 @@ export function RecentActivity({ activities = [] }: RecentActivityProps) {
               <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
               <div className="flex-1 space-y-1">
                 <p className="text-sm font-medium leading-none">
-                  Welcome to GRC Sentinel
+                  Welcome to Aegis GRC
                 </p>
                 <p className="text-sm text-muted-foreground">
                   Get started by configuring your first risk assessment

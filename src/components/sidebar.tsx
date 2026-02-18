@@ -42,7 +42,7 @@ export function Sidebar() {
   return (
     <div className="hidden h-screen w-64 flex-col border-r bg-background md:flex">
       <div className="flex h-16 items-center border-b px-6">
-        <h1 className="text-lg font-semibold">GRC Sentinel</h1>
+        <h1 className="text-lg font-semibold">Aegis GRC</h1>
       </div>
       <div className="flex-1 overflow-y-auto p-4">
         <nav className="space-y-1">
