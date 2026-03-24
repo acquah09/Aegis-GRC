@@ -1,7 +1,7 @@
 import { Metadata } from "next"
 import { getServerSession } from "@/lib/session"
 import { redirect } from "next/navigation"
-import RiskRegister from "./risk-register"
+import { RiskRegister } from "./risk-register"
 import Header from "@/components/header"
 
 export const metadata: Metadata = {

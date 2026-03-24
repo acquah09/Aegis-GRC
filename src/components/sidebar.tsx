@@ -7,6 +7,7 @@ import { Home, Shield, FileText, AlertTriangle, Settings, LogOut } from "lucide-
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { SignOutButton } from "@/components/sign-out-button"
+import { OrganizationSwitcher } from "./organization-switcher"
 
 const navItems = [
   {
@@ -15,9 +16,14 @@ const navItems = [
     icon: Home,
   },
   {
+    name: "Compliance",
+    href: "/compliance",
+    icon: Shield,
+  },
+  {
     name: "Frameworks",
     href: "/dashboard/frameworks",
-    icon: Shield,
+    icon: FileText,
   },
   {
     name: "Controls",
@@ -45,6 +51,11 @@ export function Sidebar() {
         <h1 className="text-lg font-semibold">Aegis GRC</h1>
       </div>
       <div className="flex-1 overflow-y-auto p-4">
+        {/* Organization Switcher */}
+        <div className="mb-6">
+          <OrganizationSwitcher />
+        </div>
+        
         <nav className="space-y-1">
           {navItems.map((item) => {
             const isActive = pathname === item.href

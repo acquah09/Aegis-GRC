@@ -1,6 +1,7 @@
 // src/middleware.ts
 import { createServerClient } from "@supabase/ssr"
 import { NextResponse, type NextRequest } from "next/server"
+import { rbacMiddleware } from "./middleware/rbac"
 
 const PUBLIC_PATHS = ["/", "/sign-in", "/sign-up", "/reset-password"]
 
@@ -51,6 +52,14 @@ export async function middleware(request: NextRequest) {
     request.nextUrl.pathname === path || 
     request.nextUrl.pathname.startsWith(`${path}/`)
   )
+
+  // Apply RBAC middleware for protected routes
+  if (!isPublicPath && !isAuthPage) {
+    const rbacResponse = await rbacMiddleware(request);
+    if (rbacResponse) {
+      return rbacResponse;
+    }
+  }
 
   // Redirect to dashboard if user is signed in and tries to access auth pages
   if (session && isAuthPage) {

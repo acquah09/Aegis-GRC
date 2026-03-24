@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Toaster } from "@/components/ui/toaster";
 import QueryProvider from "@/components/query-provider";
 import BackgroundWrapper from "@/components/background-wrapper";
+import { OrgProvider } from "@/contexts/OrgContext";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -32,8 +33,10 @@ export default function RootLayout({
       >
         <BackgroundWrapper>
           <QueryProvider>
-            {children}
-            <Toaster />
+            <OrgProvider>
+              {children}
+              <Toaster />
+            </OrgProvider>
           </QueryProvider>
         </BackgroundWrapper>
       </body>
