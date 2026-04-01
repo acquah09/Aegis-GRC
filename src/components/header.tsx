@@ -23,28 +23,28 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
             <Link href="/dashboard" className="flex items-center space-x-2">
-              <Shield className="h-8 w-8 text-white" />
-              <span className="text-xl font-bold text-white">Aegis GRC</span>
+              <Shield className="h-8 w-8 text-foreground" />
+              <span className="text-xl font-bold text-foreground">Aegis GRC</span>
             </Link>
           </div>
 
           <nav className="hidden md:flex items-center space-x-6">
-            <Link href="/dashboard" className="text-sm font-medium text-white hover:text-primary">
+            <Link href="/dashboard" className="text-sm font-medium text-foreground hover:text-primary">
               Dashboard
             </Link>
-            <Link href="/risks" className="text-sm font-medium text-white hover:text-primary">
+            <Link href="/risks" className="text-sm font-medium text-foreground hover:text-primary">
               Risk Management
             </Link>
-            <Link href="/controls" className="text-sm font-medium text-white hover:text-primary">
+            <Link href="/controls" className="text-sm font-medium text-foreground hover:text-primary">
               Controls
             </Link>
-            <Link href="/compliance" className="text-sm font-medium text-white hover:text-primary">
+            <Link href="/compliance" className="text-sm font-medium text-foreground hover:text-primary">
               Compliance
             </Link>
           </nav>
 
           <div className="flex items-center space-x-4">
-            <span className="text-sm text-white">
+            <span className="text-sm text-foreground">
               {session?.user?.email}
             </span>
             <Button variant="ghost" size="sm" onClick={handleSignOut}>

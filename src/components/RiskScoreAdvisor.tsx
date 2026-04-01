@@ -246,7 +246,7 @@ export function RiskScoreAdvisor({
                 </div>
 
                 {/* AI Reasoning for Likelihood */}
-                <div className="mt-2 p-2 bg-white rounded border text-xs">
+                <div className="mt-2 p-2 bg-background rounded border text-xs">
                   <div className="flex items-center gap-1 mb-1">
                     <Info className="h-3 w-3 text-blue-500" />
                     <span className="font-medium">AI Reasoning:</span>
@@ -302,7 +302,7 @@ export function RiskScoreAdvisor({
                 </div>
 
                 {/* AI Reasoning for Impact */}
-                <div className="mt-2 p-2 bg-white rounded border text-xs">
+                <div className="mt-2 p-2 bg-background rounded border text-xs">
                   <div className="flex items-center gap-1 mb-1">
                     <Info className="h-3 w-3 text-blue-500" />
                     <span className="font-medium">AI Reasoning:</span>
@@ -313,7 +313,7 @@ export function RiskScoreAdvisor({
             </div>
 
             {/* Risk Score Comparison */}
-            <div className="flex items-center justify-between p-3 bg-white rounded border">
+            <div className="flex items-center justify-between p-3 bg-background rounded border">
               <div>
                 <span className="text-sm font-medium">Risk Score: </span>
                 <span className={cn("text-lg font-bold", getScoreColor(riskScore))}>

@@ -91,11 +91,11 @@ export function OrganizationSwitcher() {
 
   if (!currentOrg && userOrgs.length === 0) {
     return (
-      <div className="p-4 border rounded-lg bg-gray-50">
+      <div className="p-4 border rounded-lg bg-muted">
         <div className="text-center">
-          <Building className="h-8 w-8 text-gray-400 mx-auto mb-4" />
-          <h3 className="text-lg font-medium text-gray-900 mb-2">No Organization</h3>
-          <p className="text-sm text-gray-600 mb-4">
+          <Building className="h-8 w-8 text-muted-foreground mx-auto mb-4" />
+          <h3 className="text-lg font-medium text-foreground mb-2">No Organization</h3>
+          <p className="text-sm text-muted-foreground mb-4">
             You need to create or join an organization to get started.
           </p>
           <div className="space-y-2">
@@ -186,8 +186,8 @@ export function OrganizationSwitcher() {
 
       {/* Create Organization Modal */}
       {isCreateModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg p-6 w-96 max-w-[90vw]">
+        <div className="fixed inset-0 bg-background/80 flex items-center justify-center z-50">
+          <div className="bg-background rounded-lg p-6 w-96 max-w-[90vw] border">
             <h3 className="text-lg font-semibold mb-4">Create New Organization</h3>
             {error && (
               <div className="bg-red-50 border border-red-200 rounded p-3 mb-4">
@@ -224,8 +224,8 @@ export function OrganizationSwitcher() {
 
       {/* Join Organization Modal */}
       {isJoinModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg p-6 w-96 max-w-[90vw]">
+        <div className="fixed inset-0 bg-background/80 flex items-center justify-center z-50">
+          <div className="bg-background rounded-lg p-6 w-96 max-w-[90vw] border">
             <h3 className="text-lg font-semibold mb-4">Join Organization</h3>
             {error && (
               <div className="bg-red-50 border border-red-200 rounded p-3 mb-4">

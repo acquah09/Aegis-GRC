@@ -306,7 +306,7 @@ export function RiskForm({
                           </Button>
                         )}
                       </div>
-                      <div className="text-sm text-muted-foreground bg-white p-3 rounded border">
+                      <div className="text-sm text-muted-foreground bg-background p-3 rounded border">
                         {aiSuggestions.description}
                       </div>
                       {acceptedSuggestions.description && (
@@ -336,7 +336,7 @@ export function RiskForm({
                           </Button>
                         )}
                       </div>
-                      <div className="text-sm text-muted-foreground bg-white p-3 rounded border">
+                      <div className="text-sm text-muted-foreground bg-background p-3 rounded border">
                         {aiSuggestions.impact_statement}
                       </div>
                       {acceptedSuggestions.impact_statement && (
@@ -355,7 +355,7 @@ export function RiskForm({
                       <div className="space-y-2">
                         {aiSuggestions.suggested_controls.map((control, index) => (
                           <div key={index} className="flex items-center justify-between">
-                            <div className="text-sm text-muted-foreground bg-white p-2 rounded border flex-1">
+                            <div className="text-sm text-muted-foreground bg-background p-2 rounded border flex-1">
                               {control}
                             </div>
                             {!acceptedSuggestions.controls.includes(control) && (

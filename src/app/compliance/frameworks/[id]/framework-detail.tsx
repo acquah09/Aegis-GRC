@@ -752,9 +752,9 @@ export function FrameworkDetail({ frameworkId }: FrameworkDetailProps) {
 
             {complianceItems.length === 0 && !isAddingItem && (
               <div className="text-center py-8">
-                <FileText className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                <h3 className="text-lg font-medium text-gray-900 mb-2">No controls yet</h3>
-                <p className="text-gray-600 mb-4">
+                <FileText className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
+                <h3 className="text-lg font-medium text-foreground mb-2">No controls yet</h3>
+                <p className="text-muted-foreground mb-4">
                   Add your first control to start tracking compliance for this framework.
                 </p>
                 <Button onClick={() => setIsAddingItem(true)}>

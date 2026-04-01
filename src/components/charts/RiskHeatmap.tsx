@@ -188,19 +188,19 @@ export function RiskHeatmap({ className, onRiskClick }: RiskHeatmapProps) {
             <div className="flex items-center gap-2">
               <div className="flex items-center gap-1">
                 <div className="w-3 h-3 bg-green-100 rounded"></div>
-                <span className="text-xs text-gray-600">Low</span>
+                <span className="text-xs text-muted-foreground">Low</span>
               </div>
               <div className="flex items-center gap-1">
                 <div className="w-3 h-3 bg-yellow-100 rounded"></div>
-                <span className="text-xs text-gray-600">Medium</span>
+                <span className="text-xs text-muted-foreground">Medium</span>
               </div>
               <div className="flex items-center gap-1">
                 <div className="w-3 h-3 bg-orange-100 rounded"></div>
-                <span className="text-xs text-gray-600">High</span>
+                <span className="text-xs text-muted-foreground">High</span>
               </div>
               <div className="flex items-center gap-1">
                 <div className="w-3 h-3 bg-red-100 rounded"></div>
-                <span className="text-xs text-gray-600">Critical</span>
+                <span className="text-xs text-muted-foreground">Critical</span>
               </div>
             </div>
           </div>
@@ -209,10 +209,10 @@ export function RiskHeatmap({ className, onRiskClick }: RiskHeatmapProps) {
           <div className="space-y-4">
             {/* Axis labels */}
             <div className="flex items-center justify-end">
-              <div className="w-16 text-right text-sm font-medium text-gray-600">Impact</div>
+              <div className="w-16 text-right text-sm font-medium text-muted-foreground">Impact</div>
               <div className="flex gap-2">
                 {[5, 4, 3, 2, 1].map((value) => (
-                  <div key={value} className="w-16 text-center text-sm text-gray-600">
+                  <div key={value} className="w-16 text-center text-sm text-muted-foreground">
                     {value}
                   </div>
                 ))}
@@ -221,13 +221,13 @@ export function RiskHeatmap({ className, onRiskClick }: RiskHeatmapProps) {
             
             {/* Heatmap grid */}
             <div className="flex items-center gap-2">
-              <div className="w-16 text-right text-sm font-medium text-gray-600">
+              <div className="w-16 text-right text-sm font-medium text-muted-foreground">
                 Likelihood
               </div>
               <div className="space-y-2">
                 {heatmapData.map((row, rowIndex) => (
                   <div key={rowIndex} className="flex gap-2">
-                    <div className="w-16 text-right text-sm text-gray-600">
+                    <div className="w-16 text-right text-sm text-muted-foreground">
                       {rowIndex + 1}
                     </div>
                     {row.map((cell, colIndex) => (
